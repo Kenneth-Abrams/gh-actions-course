@@ -1,13 +1,12 @@
 name: 02 - Building Blocks
 
 on:
-  push:
   workflow_dispatch:
 
 jobs:
     echo:
         runs-on: ubuntu-latest
         steps:
-        - name: Show the trigger
+        - name: Event name
           run: |
-            echo "EVent name: $ {{ github.event_name }}"
+            echo "Event name: ${{ github.event_name }}"
